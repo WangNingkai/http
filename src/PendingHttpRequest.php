@@ -45,7 +45,7 @@ class PendingHttpRequest
 
     /**
      * @param $options
-     * @return mixed
+     * @return PendingHttpRequest
      */
     public function withOptions($options)
     {
@@ -55,7 +55,7 @@ class PendingHttpRequest
     }
 
     /**
-     * @return mixed
+     * @return PendingHttpRequest
      */
     public function withoutRedirecting()
     {
@@ -67,7 +67,7 @@ class PendingHttpRequest
     }
 
     /**
-     * @return mixed
+     * @return PendingHttpRequest
      */
     public function withoutVerifying()
     {
@@ -79,7 +79,7 @@ class PendingHttpRequest
     }
 
     /**
-     * @return mixed
+     * @return PendingHttpRequest
      */
     public function asJson()
     {
@@ -87,7 +87,7 @@ class PendingHttpRequest
     }
 
     /**
-     * @return mixed
+     * @return PendingHttpRequest
      */
     public function asFormParams()
     {
@@ -95,7 +95,7 @@ class PendingHttpRequest
     }
 
     /**
-     * @return mixed
+     * @return PendingHttpRequest
      */
     public function asMultipart()
     {
@@ -104,7 +104,7 @@ class PendingHttpRequest
 
     /**
      * @param $format
-     * @return mixed
+     * @return PendingHttpRequest
      */
     public function bodyFormat($format)
     {
@@ -115,7 +115,7 @@ class PendingHttpRequest
 
     /**
      * @param $contentType
-     * @return mixed
+     * @return PendingHttpRequest
      */
     public function contentType($contentType)
     {
@@ -124,7 +124,7 @@ class PendingHttpRequest
 
     /**
      * @param $header
-     * @return mixed
+     * @return PendingHttpRequest
      */
     public function accept($header)
     {
@@ -133,7 +133,7 @@ class PendingHttpRequest
 
     /**
      * @param $headers
-     * @return mixed
+     * @return PendingHttpRequest
      */
     public function withHeaders($headers)
     {
@@ -147,7 +147,7 @@ class PendingHttpRequest
     /**
      * @param $username
      * @param $password
-     * @return mixed
+     * @return PendingHttpRequest
      */
     public function withBasicAuth($username, $password)
     {
@@ -161,7 +161,7 @@ class PendingHttpRequest
     /**
      * @param $username
      * @param $password
-     * @return mixed
+     * @return PendingHttpRequest
      */
     public function withDigestAuth($username, $password)
     {
@@ -174,7 +174,7 @@ class PendingHttpRequest
 
     /**
      * @param $cookies
-     * @return mixed
+     * @return PendingHttpRequest
      */
     public function withCookies($cookies)
     {
@@ -187,7 +187,7 @@ class PendingHttpRequest
 
     /**
      * @param $seconds
-     * @return mixed
+     * @return PendingHttpRequest
      */
     public function timeout($seconds)
     {
@@ -198,7 +198,7 @@ class PendingHttpRequest
 
     /**
      * @param $callback
-     * @return mixed
+     * @return PendingHttpRequest
      */
     public function beforeSending($callback)
     {
@@ -210,7 +210,7 @@ class PendingHttpRequest
     /**
      * @param $url
      * @param array $queryParams
-     * @return mixed
+     * @return HttpResponse
      * @throws ConnectionException
      */
     public function get($url, $queryParams = [])
@@ -223,7 +223,7 @@ class PendingHttpRequest
     /**
      * @param $url
      * @param array $params
-     * @return mixed
+     * @return HttpResponse
      * @throws ConnectionException
      */
     public function post($url, $params = [])
@@ -236,7 +236,7 @@ class PendingHttpRequest
     /**
      * @param $url
      * @param array $params
-     * @return mixed
+     * @return HttpResponse
      * @throws ConnectionException
      */
     public function patch($url, $params = [])
@@ -249,7 +249,7 @@ class PendingHttpRequest
     /**
      * @param $url
      * @param array $params
-     * @return mixed
+     * @return HttpResponse
      * @throws ConnectionException
      */
     public function put($url, $params = [])
@@ -262,7 +262,7 @@ class PendingHttpRequest
     /**
      * @param $url
      * @param array $params
-     * @return mixed
+     * @return HttpResponse
      * @throws ConnectionException
      */
     public function delete($url, $params = [])
@@ -276,7 +276,7 @@ class PendingHttpRequest
      * @param $method
      * @param $url
      * @param $options
-     * @return mixed
+     * @return HttpResponse
      * @throws ConnectionException
      */
     public function send($method, $url, $options)

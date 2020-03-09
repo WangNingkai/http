@@ -13,7 +13,7 @@ class HttpRequest
     /**
      * @var \GuzzleHttp\Psr7\Request $request
      */
-    private $request;
+    public $request;
 
     public function __construct($request)
     {

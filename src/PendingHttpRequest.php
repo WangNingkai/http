@@ -10,15 +10,15 @@ namespace Http;
 
 class PendingHttpRequest
 {
-    private $beforeSendingCallbacks;
+    public $beforeSendingCallbacks;
 
-    private $cookies;
+    public $cookies;
 
-    private $bodyFormat;
+    public $bodyFormat;
 
-    private $options;
+    public $options;
 
-    private $transferStats;
+    public $transferStats;
 
     /**
      * PendingHttpRequest constructor.

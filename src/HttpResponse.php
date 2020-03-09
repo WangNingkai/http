@@ -17,11 +17,11 @@ class HttpResponse
     /**
      * @var \GuzzleHttp\Psr7\Response $response
      */
-    private $response;
+    public $response;
 
-    private $cookies;
+    public $cookies;
 
-    private $transferStats;
+    public $transferStats;
 
     public function __construct($response)
     {

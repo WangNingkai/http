@@ -1,0 +1,22 @@
+{
+    "name": "wangningkai/http",
+    "description": "A developer-experience focused HTTP client, optimized for most common use cases.",
+    "keywords": ["http", "guzzle"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wang Ningkai",
+            "email": "i@ningkai.wang"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.3",
+        "guzzlehttp/guzzle": "^6.0",
+        "tightenco/collect": "^5.0|^6.0|^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Http": "src/"
+        }
+    }
+}
